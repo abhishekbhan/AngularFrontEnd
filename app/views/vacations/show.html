@@ -1,0 +1,20 @@
+<h1>Look at this your vacation: </h1>
+
+<center>
+	<p>{{ vacation.vacation.name }} | {{ vacation.vacation.description }}</p>
+
+<!-- <form ng-submit="create(attraction)" ng-controller="newAttraction">
+	<input ng-model="attraction.name" placeholder="name" type="text">
+	<br>
+	<input ng-model="attraction.location" placeholder="location" type="text">
+	<br>
+	
+	<input type="submit" value="Create attraction">
+</form> -->
+
+	<p ><a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/{{vacation.attractions[0].id }}">{{ vacation.attractions[0].name }} </a>| {{ vacation.attractions[0].location }} </p>
+</center>
+
+<a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/new">Add Attractions</a>
+
+

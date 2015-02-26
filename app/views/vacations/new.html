@@ -1,0 +1,10 @@
+<h1>Add a new vacation</h1>
+<!-- <div ng-controller="NewVacationController"> -->
+<form ng-submit="create(vacation)">
+	<input ng-model="vacation.name" placeholder="name" type="text">
+	<br>
+	<input ng-model="vacation.description" placeholder="description" type="text">
+	<br>
+	
+	<input type="submit" value="Create vacation">
+</form>

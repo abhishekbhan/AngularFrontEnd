@@ -1,0 +1,5 @@
+<h1>Welcome to vacations {{ user.username }}!</h1>
+
+<a href="#/vacations/new">New Vacation</a>
+
+<li ng-repeat="vacation in vacations"><a ng-href="#/vacations/{{ vacation.id }}">{{ vacation.name }}</a> | {{ vacation.description }} <a href="#/vacations" ng-click="destroy(vacation)">Delete</a></li>
