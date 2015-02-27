@@ -7,7 +7,7 @@ angular.module('frontendApp')
       'save'  : { method: 'POST'},
       // 'update': { method: 'PUT'},
       'show'	: { method: 'GET'},
-      'search': { method: 'GET'},
+      // 'search': { method: 'GET'},
       'create': { method: 'POST' }
     });
 });

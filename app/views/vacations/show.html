@@ -1,8 +1,7 @@
-<h1>Look at this your vacation: </h1>
+
 
 <center>
-	<p>{{ vacation.vacation.name }} | {{ vacation.vacation.description }}</p>
-
+	<h1>{{ vacation.vacation.name }} | {{ vacation.vacation.description }}</h1>
 <!-- <form ng-submit="create(attraction)" ng-controller="newAttraction">
 	<input ng-model="attraction.name" placeholder="name" type="text">
 	<br>
@@ -12,7 +11,7 @@
 	<input type="submit" value="Create attraction">
 </form> -->
 
-	<p ><a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/{{vacation.attractions[0].id }}">{{ vacation.attractions[0].name }} </a>| {{ vacation.attractions[0].location }} </p>
+	<p ng-repeat ="attraction in attractions"><a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/{{attraction.id }}">{{ attraction.name }} </a>| {{ attraction.location }} </p>
 </center>
 
 <a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/new">Add Attractions</a>

@@ -1,8 +1,25 @@
-<div>
+
+<h1>Welcome to {{ vacation.vacation.name }}</h1>
+<h1>Add a new attraction</h1>
+
+<form ng-submit="create(attraction)">
+	<input ng-model="attraction.name" placeholder="name" type="text">
+	<br>
+	<input ng-model="attraction.location" placeholder="location" type="text">
+	<br>
+	<input ng-model="attraction.url" placeholder="url" type="text">
+	<br>
+	
+	<input type="submit" value="Create attraction">
+</form>
+
+
+
+<!-- <div>
 	<form ng-submit="searchplace(search)">
 		<input ng-model="search" name="search" type="text">
 		<input class="btn btn-lg btn-default btn" type="submit" value="Search">
-	</form>
+	</form> -->
 
 	<!-- <ul ng-repeat="result in results"> 
 		<li> {{ result.name }} | {{ result.formatted_address }}</li>
@@ -20,4 +37,4 @@
 			<input type="submit" value="Add to my places!">
 		</form>
 	</li> -->
-</div>
+<!-- </div> -->
