@@ -44,7 +44,7 @@ angular.module('frontendApp')
 
 	$scope.create = function() {
 		Attraction.create({ attraction: { name: $scope.attraction.name, location: $scope.attraction.location, url: $scope.attraction.url, vacation_id: $scope.vacation_id } , vacation_id: $scope.vacation_id}, function() {
-			return $location.url('/vacations/:vacation_id/attractions');
+			return $location.url('/vacations/:vacation_id/attractions', {vacation_id: $scope.vacation_id});
 		});
 	};
 	

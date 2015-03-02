@@ -8,5 +8,6 @@ angular.module('frontendApp')
       // 'update': { method: 'PUT'},
       'show'	: { method: 'GET'},
       // 'search': { method: 'GET'}
+      'create': { method: 'POST' }
     });
 });

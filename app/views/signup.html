@@ -1,44 +1,33 @@
-<!-- <ion-view title="Signup">
-  <ion-content class="has-header">
-    <form ng-submit="createUser(newUser)">
-      <div class="list">
-        <label class="item item-input">
-          <input type="text" placeholder="Username" ng-model="newUser.username">
-        </label>
-        <label class="item item-input">
-          <input type="password" placeholder="Password" ng-model="newUser.password">
-        </label>
-        <label class="item item-input">
-          <input type="password" placeholder="Password Confirmation" ng-model="newUser.password_confirmation">
-        </label>
-        <div>
-          <button class="button button-block button-positive" type="submit">Create account</button>
+<div class="row signuppage">
+    <div class="col-md-4 col-md-offset-1">
+        <div class="panel sign-in-panel">
+          <div class="panel-heading">
+          <center>
+          <!-- <span class="glyphicon glyphicon-music"></span><br> -->
+          <h2 class="panel-title">SignUp</h2> </center>
         </div>
-        <div style="text-align: center">
+        <form ng-submit="createUser(newUser)" role="form" > 
+            <div class="form-group"> 
+            <label for="username">Username</label> 
+            <input type="text" name="username" id="username" ng-model="newUser.username" required="required" class="form-control"> 
+          </div> 
+            <div class="form-group"> 
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" ng-model="newUser.password" required="required" class="form-control"> 
+          </div> 
+          <div class="form-group"> 
+            <label for="password_confirmation">Password confirmation</label> 
+              <input type="password" name="password_confirmation" id="password_confirmation" ng-model="newUser.password_confirmation" required="required" class="form-control"> 
+          </div> 
+          <button type="submit" class="btn btn-primary btn-lg">Register</button> 
+        </form>
+        <div class="orlogin" style="text-align: center">
           Or <a href="#/login">Already have an account?</a>
         </div>
-      </div>
-    </form>
-  </ion-content>
-</ion-view>
- -->
-
-
-<form ng-submit="createUser(newUser)" role="form" > 
-  <div class="form-group"> 
-    <label for="username">Username</label> 
-      <input type="text" name="username" id="username" ng-model="newUser.username" required="required" class="form-control"> 
-  </div> 
-  <div class="form-group"> 
-    <label for="password">Password</label>
-      <input type="password" name="password" id="password" ng-model="newUser.password" required="required" class="form-control"> 
-  </div> 
-  <div class="form-group"> 
-    <label for="password_confirmation">Password confirmation</label> 
-      <input type="password" name="password_confirmation" id="password_confirmation" ng-model="newUser.password_confirmation" required="required" class="form-control"> 
-  </div> 
-  <button type="submit" class="btn btn-primary btn-lg">Register</button> 
-</form>
-<div style="text-align: center">
-  Or <a href="#/login">Already have an account?</a>
+    </fieldset>
+    </div>
+  </div>
 </div>
+
+
+

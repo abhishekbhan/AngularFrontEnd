@@ -1,5 +1,18 @@
-<h1>Welcome to vacations {{ user.username }}!</h1>
+<div class="vacations-body">
+	<div class="vacationwelcome">
+		<h1 class="welcome-vacations"> {{ user.username }}s Vacations!</h1>
+	</div>
 
-<a href="#/vacations/new">New Vacation</a>
+	<center><a class="newvacation" href="#/vacations/new">New Vacation</a></center>
+	<ul class="vacation-list list-group list-unstyled" >
+		<li ng-repeat="vacation in vacations" class="list-group-item vacation-li">
+			<h2 class="vacation-list-name"><a ng-href="#/vacations/{{ vacation.id }}">{{ vacation.name }}</a><span class="delete-vacation"><a href="#/vacations" ng-click="destroy(vacation)">X</a></span></h2>
+			<p class="vacation-description">{{ vacation.description }} </p>
+		</li>
+	</ul>
 
-<li ng-repeat="vacation in vacations"><a ng-href="#/vacations/{{ vacation.id }}">{{ vacation.name }}</a> | {{ vacation.description }} <a href="#/vacations" ng-click="destroy(vacation)">Delete</a></li>
+</div>
+
+
+
+ 

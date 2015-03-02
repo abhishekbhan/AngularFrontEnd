@@ -1,17 +1,27 @@
+<div class="new-attraction-body">
 
-<h1>Welcome to {{ vacation.vacation.name }}</h1>
-<h1>Add a new attraction</h1>
-
-<form ng-submit="create(attraction)">
-	<input ng-model="attraction.name" placeholder="name" type="text">
-	<br>
-	<input ng-model="attraction.location" placeholder="location" type="text">
-	<br>
-	<input ng-model="attraction.url" placeholder="url" type="text">
-	<br>
 	
-	<input type="submit" value="Create attraction">
-</form>
+		<div class="new-attraction-heading">
+			<h1>{{ vacation.vacation.name }}</h1>
+			<h1>ADD TOP ATTRACTIONS!</h1>
+		</div>
+	<div class="new-attraction-form-container">
+		<form ng-submit="create(attraction)">
+			<input class="newattractionname" ng-model="attraction.name" placeholder="Attraction Name" type="text">
+			<br>
+			<input class="newattractionlocation" ng-model="attraction.location" placeholder="Location" type="text">
+			<br>
+			<input class="newattractionurl" ng-model="attraction.url" placeholder="URL" type="text">
+			<br>
+			
+			<input class="new-attraction-input" type="submit" value="Create attraction">
+		</form>
+	</div>
+	<br>
+	<br>
+</div>
+
+
 
 
 

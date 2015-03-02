@@ -2,26 +2,60 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>VacShare!</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <style>
+    .navbar{
+      opacity:0.7;
+      background-color: white;
+      color: black;
+      font-weight: 100;
+      border-bottom: none;
+      margin-bottom: 0px;
+      }
+      .footer{
+        /*position:fixed;*/
+        left:0px;
+        bottom:0px;
+        height:30px;
+        width:100%;
+        margin-top:10px;
+        }
+      .containermain {
+          margin-top: 0px;
+          margin-bottom: 0px;
+      }
+
+      .ng-scope {
+        margin-bottom: 0px;
+      }
+    </style>
     <!-- endbower -->
     <!-- endbuild -->
+    <!-- ALL CSS files go here -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/login.css">
+    <link rel="stylesheet" type="text/css" href="styles/signup.css">
+    <link rel="stylesheet" type="text/css" href="styles/vacations/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/vacations/new.css">
+    <link rel="stylesheet" type="text/css" href="styles/vacations/show.css">
+    <link rel="stylesheet" type="text/css" href="styles/attractions/show.css">
+    <link rel="stylesheet" type="text/css" href="styles/attractions/new.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="frontendApp">
+  <body ng-app="frontendApp" style="width: 100%">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <div class="headermain">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -33,7 +67,7 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">frontend</a>
+            <a class="navbar-brand" href="#/">VacShare!</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -50,15 +84,17 @@
       </div>
     </div>
 
-    <div class="container">
-    <div ng-view=""></div>
+ 
+
+    <div class="container containermain" style="width: 100%">
+    <div ng-view="" style="width: 100%"></div>
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p><center><span class="glyphicon glyphicon-heart"></span> Abhishek Bhan</center></p>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -92,6 +128,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/bootstrap/js/transition.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -105,6 +142,7 @@
         <script src="scripts/controllers/newVacation.js"></script>
         <script src="scripts/controllers/newAttraction.js"></script>
         <script src="scripts/controllers/attraction.js"></script>
+        <script src="scripts/controllers/photos.js"></script>
 
         <script src="scripts/services/user.js"></script>
         <script src="scripts/services/vacations.js"></script>
