@@ -1,11 +1,12 @@
 .new-vacation-body{
   background-image: url(http://desktopbackgroundshq.com/backgrounds/beach-holiday-and-sun-glass-holiday-backgrounds-beach-glass-holiday-sun-26033.jpg);
-  /*background-image: url(headphone.jpg);*/
   /*background-position: center center; */
   /*background-repeat: no-repeat;*/
   background-attachment: fixed;
   background-size: cover;
-  /*height: 100%;*/
+  height: 100%;
+  width: 100%;
+
 }
 
 .new-vacation-heading{

@@ -1,8 +1,9 @@
 'use strict';
 
 angular.module('frontendApp')
-.controller('NewAttractionCtrl', function($scope, $route, $routeParams, $location, $http, Attraction, Vacation) {
+.controller('NewAttractionCtrl', function($scope, $rootScope, $route, $routeParams, $location, $http, Attraction, Vacation) {
 	// $scope.vacation = Vacation.get({ id: $route.current.params.vacation_id });
+	$scope.user = $rootScope.current_user;
 	$scope.vacation = Vacation.get({ id: $routeParams.vacation_id }, function(vacation)	{
 		console.log(vacation);
 		console.log(vacation.vacation.id)

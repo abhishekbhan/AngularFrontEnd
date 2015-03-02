@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('frontendApp')
-.controller('VacationCtrl', function($scope, $routeParams, Vacation, Attraction) {
+.controller('VacationCtrl', function($scope, $rootScope, $routeParams, Vacation, Attraction) {
 	// $scope.vacation = Vacation.get({ id: $routeParams['id'] });
 	// $scope.attractions = Attraction.get({ vacation_id: $routeParams['id']});
 	// console.log($scope.vacation.vacation);
 	// console.log($scope.attractions);
 
-
+	$scope.user = $rootScope.current_user;
 	$scope.vacation = Vacation.get({ id: $routeParams['id'] }, function(vacation)	{
 		console.log(vacation);
 		// console.log(vacation.vacation.id)

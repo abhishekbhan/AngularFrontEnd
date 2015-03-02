@@ -8,6 +8,7 @@
   height: 100%;
   margin-top: none;
   margin-bottom: 0px;
+  width: 100%
 }
 .welcome-vacations{
   color: white;
@@ -35,6 +36,7 @@
   padding: 10px;
   margin-bottom: 10px;
   opacity: 0.7;
+  margin-top: -10px;
 }
 
 .newvacation:hover {
@@ -74,4 +76,6 @@
   font-size: 20px;
   color: red;
   font-weight: bold;
+  background-color: grey;
+  padding: 2px;
 }

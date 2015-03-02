@@ -1,9 +1,10 @@
-<div class="vacations-body">
+<div class="vacations-body container ">
 	<div class="vacationwelcome">
 		<h1 class="welcome-vacations"> {{ user.username }}s Vacations!</h1>
 	</div>
-
-	<center><a class="newvacation" href="#/vacations/new">New Vacation</a></center>
+	<div class="newvacation">
+		<center><a class="newvacation" href="#/vacations/new">New Vacation</a></center>
+	</div>
 	<ul class="vacation-list list-group list-unstyled" >
 		<li ng-repeat="vacation in vacations" class="list-group-item vacation-li">
 			<h2 class="vacation-list-name"><a ng-href="#/vacations/{{ vacation.id }}">{{ vacation.name }}</a><span class="delete-vacation"><a href="#/vacations" ng-click="destroy(vacation)">X</a></span></h2>

@@ -1,7 +1,20 @@
 
 
-<center>
-	<h1>{{ vacation.vacation.name }} | {{ vacation.vacation.description }}</h1>
+<div class="container showvacationbody">
+	<div class="showvacation">
+		<h1>{{ vacation.vacation.name }}</h1> 
+		<p>{{ vacation.vacation.description }}</p>
+		
+	</div>
+	<hr>
+
+	<div class="attractionlist">
+		<div class="row">
+			<div class="col-md-offset-10 col-md-2 addattraction">
+				<a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/new">Add Attractions</a>
+			</div>
+		</div>
+
 <!-- <form ng-submit="create(attraction)" ng-controller="newAttraction">
 	<input ng-model="attraction.name" placeholder="name" type="text">
 	<br>
@@ -11,11 +24,20 @@
 	<input type="submit" value="Create attraction">
 </form> -->
 
-	<p ng-repeat ="attraction in attractions"><a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/{{attraction.id }}">{{ attraction.name }} </a>| {{ attraction.location }} </p>
-</center>
+		<div ng-repeat ="attraction in attractions">
+			<div class="col-md-4 attraction-show-list">
+				<div class = "thumbnail thumb-box" style="height:300px; opacity:0.8; background-image: url(http://heartfailuretoharvard.com/wp-content/uploads/2014/03/nature-summer-vacation-sea-beach-water-wallpaper.jpg)">
+					<a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/{{attraction.id }}"><h3>{{ attraction.name }} </h3></a>
+					<div class="caption" style="text-align:center; font-weight:100; color:black">
+					 	<p>{{ attraction.location }} </p>
+					</div>
+		    	</div>
+		    </div>
+		</div>
 
-<a ng-href="#/vacations/{{ vacation.vacation.id }}/attractions/new">Add Attractions</a>
+
+	</div>
 
 <!-- <a href="#/vacations/ {{vacation.vacation.id }}" ng-click="destroy(attraction)">Delete</a> -->
 
-
+</div>

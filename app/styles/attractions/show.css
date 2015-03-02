@@ -1,0 +1,77 @@
+.photosbody {
+ background:url('http://www.best-wallpaper.net/wallpaper/1920x1200/1201/Long-bridge-leading-to-another-island-beach_1920x1200.jpg');
+  /*background-size:10%;*/
+  background-position: center center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  margin-top: none;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.photosbodyheader {
+  font-family: helvetica;
+  background-color: black;
+  font-weight:100;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  opacity: 0.9;
+  /*width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;*/
+}
+.photosbodyheader form{
+  font-family: helvetica;
+  background-color: black;
+  font-weight:100;
+  text-align: center;
+  padding: 10px;
+  color: black;
+  opacity: 0.9;
+}
+
+
+
+.photoframe {
+  margin:50px auto;
+  border:25px solid #222;
+  height:450px;
+  width:500px;
+  -webkit-box-shadow:  px 2px 3px 1px rgba(0, 0, 0, .5);
+  box-shadow:  0px 3px 10px 4px rgba(0, 0, 0, .3);
+}
+
+.photoborder {
+  background:white;
+  height:100%;
+  width:100%;
+  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .4);
+  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.attractionphoto {
+  position:absolute;
+  height:300px;
+  width:350px;
+  margin-left:50px;
+  margin-top:50px;
+  -webkit-box-shadow: inset 10px 10px 10px 4px rgba(0, 0, 0, .6);
+  box-shadow: inset 3px 7px 2px 5px rgba(0, 0, 0, .1);
+  border:2px inset #c9c9c9;
+}
+
+.captiontext {
+  position:absolute;
+  margin-top:360px;
+  /*font-family: 'Playball', cursive;*/
+  font-size:16px;
+  margin-left:10px;
+  font-weight: 100;
+  background-color: black;
+  color: white;
+  opacity: 0.4;
+  padding: 5px;
+}

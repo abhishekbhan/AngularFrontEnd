@@ -1,21 +1,36 @@
-<center>
-<h1> {{ attraction.attraction.name }}</h1>
-<form ng-submit="create(photo)">
+<div class="container photosbody">
+	<div class="photosbodyheader">
+		<h1> {{ attraction.attraction.name | uppercase }}</h1>
+		<form ng-submit="create(photo)">
 
-	<input type="hidden" class="url" role="uploadcare-uploader"
-  data-images-only="true" ng-model="attraction.photo.url" />
-  	<input type="text" class="caption" ng-model="attraction.photo.caption" >
-  	<input type="submit" value="Store Photos">
-  </form>
-</center>
-<br/>
+			<input type="hidden" class="url" role="uploadcare-uploader"
+		  data-images-only="true" ng-model="attraction.photo.url" />
+		  	<input type="text" placeholder="caption" class="caption" ng-model="attraction.photo.caption" >
+		  	<input class="btn btn-warning" type="submit" value="Store Photos">
+		</form>
+	</div>
+	<br/>
 
-<div ng-controller="PhotosCtrl">
-	<center>
-		<p ng-repeat="photo in photos">
-			{{ photo.caption }}<br>
-			<img src="http://www.ucarecdn.com/{{photo.url}}/-/resize/500x350/">
-		</p>
-	</center>
-	
+	<div ng-controller="PhotosCtrl">
+	<!-- 	<center>
+			<p ng-repeat="photo in photos">
+				{{ photo.caption }}<br>
+				<img src="http://www.ucarecdn.com/{{photo.url}}/-/resize/500x350/">
+			</p>
+		</center>
+		
+	</div> -->
+		<div class="photoframe" ng-repeat="photo in photos">
+		
+	  		<div class="photoborder">
+	    		<div class="attractionphoto">
+	      			<img src="http://www.ucarecdn.com/{{photo.url}}/-/resize/350x300/" alt="" />
+	    		</div><!--end image-->
+	    		<div class="captiontext">{{ photo.caption }}
+	    		</div>
+	  		</div><!--end border-->
+	  
+		</div>
+	</div>
 </div>
+

@@ -4,7 +4,7 @@
 angular.module('frontendApp')
 .controller('VacationsCtrl', function($scope, $rootScope, $location, Vacation) {
 	// $scope.vacations = Vacation.query();
-	$scope.user = $rootScope.current_user
+	$scope.user = $rootScope.current_user;
 	console.log($scope.user)
 	$scope.vacations = Vacation.query({ user_id: $scope.user.id }, function(vacations)	{
 		console.log(vacations);
