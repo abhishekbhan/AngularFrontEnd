@@ -13,6 +13,7 @@ angular.module('frontendApp')
 		// console.log(vacation.vacation.id)
 		$scope.vacation = vacation;
 		$scope.attractions = $scope.vacation.attractions
+		console.log($scope.vacation.attractions)
 	});
 
 	// $scope.destroy = function(attraction) {

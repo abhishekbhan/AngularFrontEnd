@@ -4,7 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+  /*font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;*/
 }
 
 .leadlink {
@@ -111,7 +111,7 @@ img.grayscale {
 }
 
 .blurb {
-  padding: 120px 0;
+  padding: 75px 0;
   background-color:#fefefe;
 }
 
@@ -120,7 +120,7 @@ img.grayscale {
 }
 
 .bright {
-  background: #7fbbda url('../assets/bg_suburb.jpg') no-repeat center center fixed; 
+  background: #00CC99 url('../assets/bg_suburb.jpg') no-repeat center center fixed; 
   color:#fff;
   margin-bottom: 10px;
 }

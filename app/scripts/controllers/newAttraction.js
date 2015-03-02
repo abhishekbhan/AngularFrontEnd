@@ -45,7 +45,7 @@ angular.module('frontendApp')
 
 	$scope.create = function() {
 		Attraction.create({ attraction: { name: $scope.attraction.name, location: $scope.attraction.location, url: $scope.attraction.url, vacation_id: $scope.vacation_id } , vacation_id: $scope.vacation_id}, function() {
-			return $location.url('/vacations/:vacation_id/attractions', {vacation_id: $scope.vacation_id});
+			return $location.url('/vacations/'+$scope.vacation_id);
 		});
 	};
 	
@@ -53,24 +53,20 @@ angular.module('frontendApp')
 });
 
 
- // $scope.searchSoundCloud = function(){
- //          var searchString = $('#searchForm').find('input[name="searchString"]').val()
+ // $scope.searchGooglePlaces = function(){
+ //          var search = $('#searchAPI').find('input[name="search"]').val()
  //          var req = {
  //               method: 'POST',
- //               url: 'http://localhost:8000/soundCloudSearch',
+ //               url: 'http://localhost:3000/searchplaces',
  //               headers: {
  //                 'Content-Type': "application/json"
  //               },
- //               data: { searchString: searchString },
+ //               data: { search: search },
  //              }                     
  //            $http(req).success(function(res){
- //              var tracks = res;
- //              for(i=0; i<tracks.length; i++){
- //                if(!tracks[i].artwork_url){
- //                  tracks[i].artwork_url= 'https://upload.wikimedia.org/wikipedia/en/thumb/a/af/Squarepusher_Enstrobia.jpg/220px-Squarepusher_Enstrobia.jpg';
- //                };
- //              }
- //              $scope.tracks = tracks;
+ //              var results = res;
+ //              
+ //              $scope.results = resultss;
  //            })
- //          .error(function(res){console.log(res)})                                       
+ //        	                                    
  //        };
